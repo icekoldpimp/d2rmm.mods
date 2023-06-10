@@ -268,69 +268,6 @@ const hdmissiles = D2RMM.readJson(hdmissilesFilename);
 hdmissiles.meleeareadamage = 'melee_area_damage';
 D2RMM.writeJson(hdmissilesFilename, hdmissiles);
 
-D2RMM.writeJson('hd\\missiles\\melee_area_damage.json', {
-  dependencies: {
-    particles: [
-      {
-        path: 'data/hd/vfx/particles/missiles/explosion_spark_small/vfx_explosion_spark_small.particles',
-      },
-    ],
-    models: [],
-    skeletons: [],
-    animations: [],
-    textures: [],
-    physics: [],
-    json: [],
-    variantdata: [],
-    objecteffects: [],
-    other: [],
-  },
-  type: 'UnitDefinition',
-  name: 'melee_area_damage',
-  entities: [
-    {
-      type: 'Entity',
-      name: 'entity_root',
-      id: 2527807554 + 1, // TODO: how to get a unique ID here?
-      components: [
-        {
-          type: 'UnitRootComponent',
-          name: 'component_root',
-          state_machine_filename: '',
-          doNotInheritRotation: false,
-          rotationOverride: { x: 0, y: 0.3826834, z: 0, w: 0.9238795 },
-          doNotUseHDHeight: false,
-          hideAllMeshWhenInOpenedMode: false,
-          onCreateEventName: '',
-          animations: [],
-        },
-      ],
-    },
-    {
-      type: 'Entity',
-      name: 'entity_vfx1',
-      id: 3060251343 + 1, // TODO: how to get a unique ID here?
-      components: [
-        {
-          type: 'TransformDefinitionComponent',
-          name: 'component_transform1',
-          position: { x: 0, y: 2, z: 0 },
-          orientation: { x: 0, y: 0, z: 0, w: 1 },
-          scale: { x: 1, y: 1, z: 1 },
-          inheritOnlyPosition: false,
-        },
-        {
-          type: 'VfxDefinitionComponent',
-          name: 'entity_vfx1_VfxDefinition',
-          filename:
-            'data/hd/vfx/particles/missiles/explosion_spark_small/vfx_explosion_spark_small.particles',
-          hardKillOnDestroy: false,
-        },
-      ],
-    },
-  ],
-});
-
 const itemNameAffixesFilename = 'local\\lng\\strings\\item-nameaffixes.json';
 const itemNameAffixes = D2RMM.readJson(itemNameAffixesFilename);
 itemNameAffixes.push({
